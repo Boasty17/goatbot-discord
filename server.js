@@ -50,9 +50,40 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === 'g/help') {
-    message.channel.send("**GoatBot Beta** \nCommandes : ```\ng/ping : Montre le temps de latence \ng/goat : Je sais pas. \ng/support: envoie un lien vers le serveur de support \ng/invite: Pour m'inviter sur votre serveur \ng/test: test````*GoatBot Beta by Fledrox#5616 with ƁƠƛƧƬƳ#9542*`");
+    message.channel.send("**GoatBot Beta** \nCommandes : \nPratique : `g/ping` `g/support` `g/invite` `g/test` \nFun : `g/goat` \nFaites `g/help <commande>` pour plus d'informations sur une commande \n`*GoatBot Beta by Fledrox#5616 with ƁƠƛƧƬƳ#9542*`");
   }
 });
 
-                         
+client.on('message', message => {
+  if (message.content === 'g/help ping') {
+    message.channel.send('Montre le temps de latence du bot');
+  }
+});
+
+client.on('message', message => {
+  if (message.content === 'g/help support') {
+    message.channel.send('Envoie un lien vers le serveur de support');
+  }
+});
+         
+client.on('message', message => {
+  if (message.content === 'g/help invite') {
+    message.channel.send("Pour m'inviter sur votre serveur !");
+  }
+});
+
+client.on('message', message => {
+  if (message.content === 'g/help test') {
+    message.channel.send('Juste un test');
+  }
+});
+      
+client.on('message', message => {
+  if (message.content === 'g/help goat') {
+    message.channel.send('Euhhhhhhhh');
+  }
+});
+
+
+
     client.login('MzYyNjM3Mzc3NTg1NTQ1MjM5.DXxeTg.St1ItZeBgfDdIp80jjJS-6f137g');
