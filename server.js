@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content === 'g/ping') {
-    message.channel.send("Pong ! :ping_pong: " +new Date().getTime() - message.createdTimestamp + "ms");
+    message.channel.send("Pong ! :ping_pong:`" + `${message.createdTimestamp - Date.now()}` + ' ms`');
   }
 });
 
@@ -26,7 +26,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === 'bite') {
-    message.channel.send("Ta gueule, Stévan");
+    message.channel.send("Ta gueule, <@288984118748774400>");
   }
 });
 
